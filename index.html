@@ -326,6 +326,61 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .empty-icon{font-size:56px;margin-bottom:12px;opacity:.5}
 .empty-text{font-size:15px;font-weight:600}
 
+/* ADMIN */
+.admin-header{background:linear-gradient(135deg,#102020,#1a3a3a);border-radius:16px;padding:20px;color:white;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
+.admin-header h2{font-family:'Fraunces',serif;font-size:20px}
+.admin-header p{font-size:12px;opacity:.7;margin-top:4px}
+.admin-badge{background:rgba(200,75,14,0.9);color:white;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700}
+.admin-tabs{display:flex;gap:6px;margin-bottom:20px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.admin-tabs::-webkit-scrollbar{display:none}
+.admin-tab{padding:8px 16px;border-radius:20px;border:1.5px solid #dde8e8;background:white;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;color:var(--mid);transition:all .2s;font-family:inherit}
+.admin-tab.active{background:var(--dark);color:white;border-color:var(--dark)}
+.admin-content{display:none}
+.admin-content.active{display:block}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}
+.stat-card{background:white;border-radius:12px;padding:16px;box-shadow:var(--card-shadow)}
+.stat-label{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:4px}
+.stat-value{font-size:24px;font-weight:800;color:var(--dark)}
+.stat-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.stat-card.teal .stat-value{color:var(--teal)}
+.stat-card.orange .stat-value{color:var(--orange)}
+.admin-table-wrap{background:white;border-radius:14px;box-shadow:var(--card-shadow);overflow:hidden;margin-bottom:16px}
+.admin-table-head{padding:14px 16px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.admin-table-title{font-weight:700;font-size:14px;color:var(--dark)}
+.table-row{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid #f5f5f5;transition:background .15s}
+.table-row:hover{background:#fafafa}
+.table-row:last-child{border-bottom:none}
+.row-emoji{font-size:22px;width:36px;text-align:center;flex-shrink:0}
+.row-info{flex:1;min-width:0}
+.row-name{font-weight:600;font-size:13px;color:var(--dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row-sub{font-size:12px;color:var(--muted)}
+.row-right{text-align:right;flex-shrink:0}
+.row-price{font-weight:800;font-size:13px;color:var(--orange)}
+.stock-pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px}
+.stock-pill.ok{background:rgba(11,110,110,0.1);color:var(--teal)}
+.stock-pill.low{background:rgba(200,75,14,0.1);color:var(--orange)}
+.stock-pill.out{background:#f0f0f0;color:#999}
+.row-actions{display:flex;gap:6px;margin-left:8px;flex-shrink:0}
+.btn-edit{padding:5px 10px;background:var(--teal3);color:var(--teal);border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn-del{padding:5px 10px;background:#fef0f0;color:#c0392b;border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.add-product-form{background:white;border-radius:14px;padding:18px;box-shadow:var(--card-shadow);margin-bottom:16px}
+.add-product-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.order-mgmt-row{display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border-radius:12px;box-shadow:var(--card-shadow);margin-bottom:10px}
+.order-mgmt-info{flex:1}
+.order-mgmt-id{font-weight:700;font-size:13px;color:var(--dark)}
+.order-mgmt-items{font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px}
+.status-select{padding:6px 10px;border:1.5px solid #dde8e8;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;color:var(--mid);font-family:inherit;background:white}
+.member-row{display:flex;align-items:center;gap:10px;padding:12px 16px;background:white;border-radius:12px;box-shadow:var(--card-shadow);margin-bottom:10px}
+.member-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:14px;flex-shrink:0}
+.member-info{flex:1}
+.member-name-row{font-weight:700;font-size:13px;color:var(--dark)}
+.member-nim-row{font-size:12px;color:var(--muted)}
+.member-status-pill{padding:4px 10px;border-radius:10px;font-size:11px;font-weight:700;flex-shrink:0}
+.member-status-pill.active{background:rgba(11,110,110,0.1);color:var(--teal)}
+.member-status-pill.inactive{background:#f0f0f0;color:#999}
+.revenue-bar{height:8px;background:#eee;border-radius:4px;margin-top:6px;overflow:hidden}
+.revenue-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--teal2));border-radius:4px;transition:width .5s ease}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -469,6 +524,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <div id="profile-area"></div>
     </div>
 
+    <!-- PAGE: ADMIN -->
+    <div class="page" id="page-admin">
+      <div id="admin-area"></div>
+    </div>
+
   </div>
 
   <!-- BOTTOM NAV -->
@@ -488,6 +548,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
     <button class="nav-item" id="nav-profile" onclick="showPage('profile')">
       <span class="nav-icon">👤</span>
       <span class="nav-label">Profil</span>
+    </button>
+    <button class="nav-item" id="nav-admin" onclick="showPage('admin')">
+      <span class="nav-icon">⚙️</span>
+      <span class="nav-label">Admin</span>
     </button>
   </nav>
 </div>
@@ -596,16 +660,6 @@ function startApp(){
   renderChat();
   renderProfile();
   showPage('home');
-}
-
-// ─── PAGES ───
-function showPage(page){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-  document.getElementById('page-'+page).classList.add('active');
-  const nav = document.getElementById('nav-'+page);
-  if(nav) nav.classList.add('active');
-  if(page==='cart') renderCart();
 }
 
 // ─── PRODUCTS ───
@@ -866,6 +920,252 @@ function showToast(msg){
   const t=document.getElementById('toast');
   t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+// ─── ADMIN ───
+let adminTab='dashboard';
+const adminMembers=[
+  {name:'Ratih Dian M.',nim:'20231064',status:'active',joined:'Jan 2025'},
+  {name:'Okana Jabbar W.',nim:'16231047',status:'active',joined:'Feb 2025'},
+  {name:'Dave Agles R.',nim:'16231015',status:'active',joined:'Feb 2025'},
+  {name:'Evan Duta R.',nim:'16231021',status:'inactive',joined:'Mar 2025'},
+  {name:'M. Akmal F.',nim:'16231034',status:'active',joined:'Mar 2025'},
+  {name:'Budi Santoso',nim:'20231010',status:'inactive',joined:'Apr 2025'},
+];
+
+function showPage(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  const nav=document.getElementById('nav-'+page);
+  if(nav)nav.classList.add('active');
+  if(page==='cart')renderCart();
+  if(page==='admin')renderAdmin();
+}
+
+function switchAdminTab(tab){
+  adminTab=tab;
+  document.querySelectorAll('.admin-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.admin-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('atab-'+tab).classList.add('active');
+  document.getElementById('acontent-'+tab).classList.add('active');
+}
+
+function renderAdmin(){
+  const area=document.getElementById('admin-area');
+  const totalRevenue=state.orders.reduce((s,o)=>s+o.total,0);
+  const pendingOrders=state.orders.filter(o=>o.status==='pending'||o.status==='processing').length;
+  const activeMembers=adminMembers.filter(m=>m.status==='active').length;
+  const lowStock=state.products.filter(p=>p.stock<=5).length;
+
+  area.innerHTML=`
+  <div class="admin-header">
+    <div>
+      <h2>⚙️ Panel Admin</h2>
+      <p>Kelola produk, pesanan & member</p>
+    </div>
+    <div class="admin-badge">Admin</div>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="admin-tab active" id="atab-dashboard" onclick="switchAdminTab('dashboard')">📊 Dashboard</button>
+    <button class="admin-tab" id="atab-products" onclick="switchAdminTab('products')">🏪 Produk</button>
+    <button class="admin-tab" id="atab-orders" onclick="switchAdminTab('orders')">📦 Pesanan</button>
+    <button class="admin-tab" id="atab-members" onclick="switchAdminTab('members')">👥 Member</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="admin-content active" id="acontent-dashboard">
+    <div class="stat-grid">
+      <div class="stat-card teal">
+        <div class="stat-label">Total Pendapatan</div>
+        <div class="stat-value">Rp ${(totalRevenue/1000).toFixed(0)}K</div>
+        <div class="stat-sub">+12% bulan ini</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">Pesanan Aktif</div>
+        <div class="stat-value">${pendingOrders}</div>
+        <div class="stat-sub">Menunggu diproses</div>
+      </div>
+      <div class="stat-card teal">
+        <div class="stat-label">Member Aktif</div>
+        <div class="stat-value">${activeMembers}</div>
+        <div class="stat-sub">dari ${adminMembers.length} total member</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">Stok Hampir Habis</div>
+        <div class="stat-value">${lowStock}</div>
+        <div class="stat-sub">Perlu restock segera</div>
+      </div>
+    </div>
+    <div class="admin-table-wrap">
+      <div class="admin-table-head">
+        <div class="admin-table-title">📈 Produk Terlaris</div>
+      </div>
+      ${['Nasi Goreng Spesial','Es Teh Manis','Kopi Susu','Roti Bakar Coklat','Aqua 600ml']
+        .map((name,i)=>{
+          const pct=[88,72,65,54,40][i];
+          return `<div class="table-row">
+            <div class="row-emoji">${['🍳','🧋','☕','🍞','💧'][i]}</div>
+            <div class="row-info">
+              <div class="row-name">${name}</div>
+              <div class="revenue-bar"><div class="revenue-fill" style="width:${pct}%"></div></div>
+            </div>
+            <div class="row-right"><div class="row-price">${[48,36,33,27,20][i]}x terjual</div></div>
+          </div>`;
+        }).join('')}
+    </div>
+    <div class="admin-table-wrap">
+      <div class="admin-table-head"><div class="admin-table-title">💰 Pendapatan Membership</div></div>
+      <div class="table-row">
+        <div style="flex:1;font-size:13px;color:var(--mid)">Paket Bulanan (${activeMembers} member)</div>
+        <div class="row-price">Rp ${(activeMembers*5000).toLocaleString('id-ID')}</div>
+      </div>
+      <div class="table-row">
+        <div style="flex:1;font-size:13px;color:var(--mid)">Fee transaksi (${state.orders.length} order)</div>
+        <div class="row-price">Rp ${(state.orders.length*500).toLocaleString('id-ID')}</div>
+      </div>
+      <div class="table-row" style="background:#f9faf8">
+        <div style="flex:1;font-size:14px;font-weight:700;color:var(--dark)">Total Bulan Ini</div>
+        <div style="font-weight:800;font-size:15px;color:var(--teal)">Rp ${(activeMembers*5000+state.orders.length*500).toLocaleString('id-ID')}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <div class="admin-content" id="acontent-products">
+    <div class="add-product-form">
+      <div class="section-title" style="margin-bottom:12px"><span>➕</span> Tambah Produk</div>
+      <div class="form-field"><label>Nama Produk</label><input type="text" id="ap-name" placeholder="Nama produk"></div>
+      <div class="form-row">
+        <div class="form-field"><label>Harga (Rp)</label><input type="number" id="ap-price" placeholder="10000"></div>
+        <div class="form-field"><label>Stok</label><input type="number" id="ap-stock" placeholder="20"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-field"><label>Kategori</label>
+          <select id="ap-cat">
+            <option value="makanan">🍜 Makanan</option>
+            <option value="minuman">☕ Minuman</option>
+            <option value="snack">🍪 Snack</option>
+            <option value="alat">✏️ Alat Tulis</option>
+          </select>
+        </div>
+        <div class="form-field"><label>Emoji</label><input type="text" id="ap-emoji" placeholder="🍕" maxlength="2"></div>
+      </div>
+      <button class="btn-primary" onclick="adminAddProduct()">Tambah Produk</button>
+    </div>
+    <div class="admin-table-wrap">
+      <div class="admin-table-head">
+        <div class="admin-table-title">Daftar Produk (${state.products.length})</div>
+      </div>
+      ${state.products.map(p=>{
+        const sc=p.stock>10?'ok':p.stock>0?'low':'out';
+        const sl=p.stock>10?'Aman':p.stock>0?'Hampir Habis':'Habis';
+        return `<div class="table-row" id="prod-row-${p.id}">
+          <div class="row-emoji">${p.emoji}</div>
+          <div class="row-info">
+            <div class="row-name">${p.name}</div>
+            <div class="row-sub">Rp ${p.price.toLocaleString('id-ID')} · ${p.cat}</div>
+          </div>
+          <div class="row-right">
+            <div class="stock-pill ${sc}">${p.stock} · ${sl}</div>
+          </div>
+          <div class="row-actions">
+            <button class="btn-edit" onclick="adminEditStock(${p.id})">Stok</button>
+            <button class="btn-del" onclick="adminDelProduct(${p.id})">Hapus</button>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>
+
+  <!-- ORDERS -->
+  <div class="admin-content" id="acontent-orders">
+    <div class="admin-table-wrap" style="margin-bottom:16px">
+      <div class="admin-table-head"><div class="admin-table-title">Semua Pesanan (${state.orders.length})</div></div>
+      ${state.orders.map(o=>`
+        <div class="order-mgmt-row">
+          <div class="order-mgmt-info">
+            <div class="order-mgmt-id">${o.id}</div>
+            <div class="order-mgmt-items">${o.items}</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:2px">${o.date} · Rp ${o.total.toLocaleString('id-ID')}</div>
+          </div>
+          <select class="status-select" onchange="adminUpdateOrder('${o.id}',this.value)">
+            <option value="pending" ${o.status==='pending'?'selected':''}>⏳ Pending</option>
+            <option value="processing" ${o.status==='processing'?'selected':''}>🔄 Diproses</option>
+            <option value="ready" ${o.status==='ready'?'selected':''}>✅ Siap Ambil</option>
+            <option value="done" ${o.status==='done'?'selected':''}>☑️ Selesai</option>
+          </select>
+        </div>`).join('')}
+    </div>
+  </div>
+
+  <!-- MEMBERS -->
+  <div class="admin-content" id="acontent-members">
+    <div class="stat-grid" style="margin-bottom:16px">
+      <div class="stat-card teal">
+        <div class="stat-label">Member Aktif</div>
+        <div class="stat-value">${activeMembers}</div>
+        <div class="stat-sub">Rp ${(activeMembers*5000).toLocaleString('id-ID')}/bulan</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Non-Member</div>
+        <div class="stat-value">${adminMembers.length-activeMembers}</div>
+        <div class="stat-sub">Potensi konversi</div>
+      </div>
+    </div>
+    ${adminMembers.map(m=>`
+      <div class="member-row">
+        <div class="member-avatar">${m.name[0]}</div>
+        <div class="member-info">
+          <div class="member-name-row">${m.name}</div>
+          <div class="member-nim-row">NIM: ${m.nim} · Bergabung ${m.joined}</div>
+        </div>
+        <div class="member-status-pill ${m.status}">${m.status==='active'?'✓ Aktif':'Non-Member'}</div>
+      </div>`).join('')}
+  </div>`;
+}
+
+function adminAddProduct(){
+  const name=document.getElementById('ap-name').value;
+  const price=parseInt(document.getElementById('ap-price').value);
+  const stock=parseInt(document.getElementById('ap-stock').value);
+  const cat=document.getElementById('ap-cat').value;
+  const emoji=document.getElementById('ap-emoji').value||'📦';
+  if(!name||!price||!stock){showToast('Lengkapi semua field!');return}
+  const id=Math.max(...state.products.map(p=>p.id))+1;
+  state.products.push({id,name,price,stock,cat,emoji});
+  document.getElementById('ap-name').value='';
+  document.getElementById('ap-price').value='';
+  document.getElementById('ap-stock').value='';
+  document.getElementById('ap-emoji').value='';
+  showToast(`✅ Produk "${name}" ditambahkan!`);
+  renderAdmin();renderProducts();
+}
+function adminEditStock(id){
+  const p=state.products.find(p=>p.id===id);
+  const newStock=prompt(`Update stok "${p.name}" (saat ini: ${p.stock}):`,p.stock);
+  if(newStock===null)return;
+  p.stock=Math.max(0,parseInt(newStock)||0);
+  showToast(`📦 Stok "${p.name}" diupdate jadi ${p.stock}`);
+  renderAdmin();renderProducts();
+}
+function adminDelProduct(id){
+  const p=state.products.find(p=>p.id===id);
+  if(!confirm(`Hapus "${p.name}"?`))return;
+  state.products=state.products.filter(p=>p.id!==id);
+  showToast(`🗑 Produk dihapus`);
+  renderAdmin();renderProducts();
+}
+function adminUpdateOrder(id,status){
+  const o=state.orders.find(o=>o.id===id);
+  if(o){
+    o.status=status;
+    const steps={pending:1,processing:2,ready:3,done:4};
+    o.steps=steps[status]||1;
+    renderOrders();
+    showToast(`✅ Pesanan ${id} → ${status}`);
+  }
 }
 </script>
 </body>
