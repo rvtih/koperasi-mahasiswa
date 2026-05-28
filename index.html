@@ -1379,6 +1379,7 @@ function adminRejectPO(id){
   const po=state.preOrders.find(p=>p.id===id);
   if(po){po.status='cancelled';showToast(`❌ PO ${id} ditolak`);renderAdmin();}
 }
+function adminAddProduct(){
   const name=document.getElementById('ap-name').value;
   const price=parseInt(document.getElementById('ap-price').value);
   const stock=parseInt(document.getElementById('ap-stock').value);
