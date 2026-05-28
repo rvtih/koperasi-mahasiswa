@@ -326,7 +326,62 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
 .empty-icon{font-size:56px;margin-bottom:12px;opacity:.5}
 .empty-text{font-size:15px;font-weight:600}
 
-/* ADMIN */
+/* PO MODAL & LIST */
+.po-modal-sheet{background:var(--white);border-radius:24px 24px 0 0;padding:28px 24px 40px;width:100%;max-width:480px;animation:slideUp .3s ease}
+.po-product-preview{display:flex;align-items:center;gap:14px;background:var(--bg);border-radius:12px;padding:14px;margin-bottom:20px}
+.po-product-emoji{font-size:36px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--teal3),var(--orange3));border-radius:12px}
+.po-product-name{font-weight:700;font-size:15px;color:var(--dark)}
+.po-product-price{font-size:14px;color:var(--orange);font-weight:700;margin-top:2px}
+.po-product-stock{font-size:12px;color:var(--muted);margin-top:2px}
+.po-date-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.po-date-opt{padding:10px 6px;border:1.5px solid #dde8e8;border-radius:10px;text-align:center;cursor:pointer;transition:all .2s;background:var(--white)}
+.po-date-opt.selected{border-color:var(--teal);background:var(--teal3)}
+.po-date-opt .date-day{font-size:11px;color:var(--muted);font-weight:600}
+.po-date-opt .date-label{font-size:13px;font-weight:700;color:var(--dark);margin-top:2px}
+.po-date-opt.selected .date-day,.po-date-opt.selected .date-label{color:var(--teal)}
+.po-qty-row{display:flex;align-items:center;justify-content:space-between;background:var(--bg);border-radius:10px;padding:12px 14px;margin-bottom:16px}
+.po-qty-label{font-weight:600;font-size:14px;color:var(--dark)}
+.po-qty-control{display:flex;align-items:center;gap:12px}
+.po-qty-btn{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--teal);background:transparent;color:var(--teal);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:700;transition:all .2s;font-family:inherit}
+.po-qty-btn:hover{background:var(--teal);color:var(--white)}
+.po-qty-num{font-size:18px;font-weight:800;color:var(--dark);min-width:28px;text-align:center}
+.po-note{width:100%;padding:10px 14px;border:1.5px solid #dde8e8;border-radius:10px;font-size:14px;font-family:inherit;resize:none;margin-bottom:16px}
+.po-note:focus{outline:none;border-color:var(--teal2)}
+.po-summary{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1.5px dashed #dde8e8;margin-bottom:16px}
+.po-summary-label{font-size:14px;color:var(--mid)}
+.po-summary-total{font-size:18px;font-weight:800;color:var(--teal)}
+.po-card{background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--card-shadow);margin-bottom:12px;border-left:4px solid var(--orange)}
+.po-card.confirmed{border-left-color:var(--teal)}
+.po-card.cancelled{border-left-color:#ccc;opacity:.7}
+.po-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.po-card-id{font-weight:700;font-size:14px;color:var(--dark)}
+.po-status{padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.po-status.waiting{background:rgba(200,75,14,0.1);color:var(--orange)}
+.po-status.confirmed{background:rgba(11,110,110,0.1);color:var(--teal)}
+.po-status.ready{background:rgba(22,160,133,0.15);color:#0a8060}
+.po-status.cancelled{background:#f0f0f0;color:#999}
+.po-card-product{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.po-card-emoji{font-size:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--teal3);border-radius:8px}
+.po-card-info{flex:1}
+.po-card-name{font-weight:700;font-size:13px;color:var(--dark)}
+.po-card-detail{font-size:12px;color:var(--muted);margin-top:2px}
+.po-card-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #f0f0f0;padding-top:10px}
+.po-card-date{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.po-card-total{font-weight:800;color:var(--orange);font-size:14px}
+.po-card.confirmed .po-card-total{color:var(--teal)}
+.po-cancel-btn{padding:5px 12px;background:#fef0f0;color:#c0392b;border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.po-admin-card{background:var(--white);border-radius:12px;padding:14px 16px;box-shadow:var(--card-shadow);margin-bottom:10px;display:flex;align-items:flex-start;gap:12px}
+.po-admin-emoji{font-size:24px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--orange3);border-radius:8px;flex-shrink:0}
+.po-admin-info{flex:1;min-width:0}
+.po-admin-name{font-weight:700;font-size:13px;color:var(--dark)}
+.po-admin-detail{font-size:12px;color:var(--muted);margin-top:2px}
+.po-admin-actions{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
+.po-confirm-btn{padding:6px 12px;background:var(--teal);color:var(--white);border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.po-reject-btn{padding:6px 12px;background:#fef0f0;color:#c0392b;border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
+.po-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.po-stat{background:var(--white);border-radius:10px;padding:12px;text-align:center;box-shadow:var(--card-shadow)}
+.po-stat-val{font-size:22px;font-weight:800;color:var(--teal)}
+.po-stat-label{font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
 .admin-header{background:linear-gradient(135deg,#102020,#1a3a3a);border-radius:16px;padding:20px;color:white;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
 .admin-header h2{font-family:'Fraunces',serif;font-size:20px}
 .admin-header p{font-size:12px;opacity:.7;margin-top:4px}
@@ -512,6 +567,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <div id="orders-list"></div>
     </div>
 
+    <!-- PAGE: PRE-ORDER -->
+    <div class="page" id="page-po">
+      <div id="po-area"></div>
+    </div>
+
     <!-- PAGE: CHAT -->
     <div class="page" id="page-chat">
       <div class="section-title"><span>💬</span> Pesan</div>
@@ -537,6 +597,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <span class="nav-icon">🏠</span>
       <span class="nav-label">Beranda</span>
     </button>
+    <button class="nav-item" id="nav-po" onclick="showPage('po')">
+      <span class="nav-icon">📦</span>
+      <span class="nav-label">Pre-Order</span>
+    </button>
     <button class="nav-item" id="nav-orders" onclick="showPage('orders')">
       <span class="nav-icon">📋</span>
       <span class="nav-label">Pesanan</span>
@@ -554,6 +618,32 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(-
       <span class="nav-label">Admin</span>
     </button>
   </nav>
+</div>
+
+<!-- PO MODAL -->
+<div class="modal-overlay" id="po-modal" style="display:none" onclick="closePOModal(event)">
+  <div class="po-modal-sheet" onclick="event.stopPropagation()">
+    <div class="modal-title">📦 Form Pre-Order</div>
+    <div id="po-product-preview"></div>
+    <div class="form-field">
+      <label>Pilih Tanggal Ambil</label>
+      <div class="po-date-options" id="po-date-options"></div>
+    </div>
+    <div class="po-qty-row">
+      <div class="po-qty-label">Jumlah</div>
+      <div class="po-qty-control">
+        <button class="po-qty-btn" onclick="changePOQty(-1)">−</button>
+        <div class="po-qty-num" id="po-qty-display">1</div>
+        <button class="po-qty-btn" onclick="changePOQty(1)">+</button>
+      </div>
+    </div>
+    <textarea class="po-note" id="po-note" rows="2" placeholder="Catatan untuk penjual (opsional)..."></textarea>
+    <div class="po-summary">
+      <div class="po-summary-label">Total estimasi:</div>
+      <div class="po-summary-total" id="po-total-display">Rp 0</div>
+    </div>
+    <button class="btn-primary" onclick="submitPO()">Konfirmasi Pre-Order 📦</button>
+  </div>
 </div>
 
 <!-- PAYMENT MODAL -->
@@ -591,6 +681,13 @@ const state = {
   cart: [],
   selectedPayment: 'QRIS',
   activeChat: null,
+  currentPOProduct: null,
+  currentPOQty: 1,
+  selectedPODate: null,
+  preOrders: [
+    {id:'PO-001',productId:1,productName:'Nasi Goreng Spesial',emoji:'🍳',qty:2,date:'Besok',pickupDate:'29 Mei',total:24000,status:'confirmed',note:'Jangan terlalu pedas ya kak',orderedAt:'08:30'},
+    {id:'PO-002',productId:4,productName:'Es Teh Manis',emoji:'🧋',qty:3,date:'Lusa',pickupDate:'30 Mei',total:15000,status:'waiting',note:'',orderedAt:'09:15'},
+  ],
   products: [
     {id:1,name:'Nasi Goreng Spesial',price:12000,stock:15,cat:'makanan',emoji:'🍳'},
     {id:2,name:'Mie Ayam Bakso',price:10000,stock:8,cat:'makanan',emoji:'🍜'},
@@ -659,6 +756,7 @@ function startApp(){
   renderOrders();
   renderChat();
   renderProfile();
+  renderPOPage();
   showPage('home');
 }
 
@@ -710,7 +808,7 @@ function addToCart(id){
 }
 function preOrder(id){
   const p=state.products.find(p=>p.id===id);
-  showToast(`📦 Pre-order ${p.name} berhasil!`);
+  openPOModal(p);
 }
 function updateCartCount(){
   const total = state.cart.reduce((s,i)=>s+i.qty,0);
@@ -922,6 +1020,126 @@ function showToast(msg){
   setTimeout(()=>t.classList.remove('show'),2500);
 }
 
+// ─── PRE-ORDER ───
+const pickupDates=[
+  {day:'Hari ini',label:'Sore ini',value:'today'},
+  {day:'Besok',label:'Pagi',value:'tomorrow'},
+  {day:'Lusa',label:'Pagi',value:'overmorrow'},
+];
+
+function openPOModal(product){
+  state.currentPOProduct=product;
+  state.currentPOQty=1;
+  state.selectedPODate='tomorrow';
+  // Preview produk
+  document.getElementById('po-product-preview').innerHTML=`
+    <div class="po-product-preview">
+      <div class="po-product-emoji">${product.emoji}</div>
+      <div>
+        <div class="po-product-name">${product.name}</div>
+        <div class="po-product-price">Rp ${product.price.toLocaleString('id-ID')} / porsi</div>
+        <div class="po-product-stock">${product.stock>0?`Stok tersedia: ${product.stock}`:'⚠ Stok habis — PO tetap bisa!'}</div>
+      </div>
+    </div>`;
+  // Date options
+  document.getElementById('po-date-options').innerHTML=pickupDates.map(d=>`
+    <div class="po-date-opt ${d.value==='tomorrow'?'selected':''}" onclick="selectPODate('${d.value}',this)">
+      <div class="date-day">${d.day}</div>
+      <div class="date-label">${d.label}</div>
+    </div>`).join('');
+  updatePOTotal();
+  document.getElementById('po-modal').style.display='flex';
+}
+
+function closePOModal(e){
+  if(e.target===document.getElementById('po-modal'))
+    document.getElementById('po-modal').style.display='none';
+}
+
+function selectPODate(val,el){
+  state.selectedPODate=val;
+  document.querySelectorAll('.po-date-opt').forEach(d=>d.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function changePOQty(delta){
+  state.currentPOQty=Math.max(1,Math.min(10,state.currentPOQty+delta));
+  document.getElementById('po-qty-display').textContent=state.currentPOQty;
+  updatePOTotal();
+}
+
+function updatePOTotal(){
+  if(!state.currentPOProduct)return;
+  const total=state.currentPOProduct.price*state.currentPOQty;
+  document.getElementById('po-total-display').textContent=`Rp ${total.toLocaleString('id-ID')}`;
+}
+
+function submitPO(){
+  const p=state.currentPOProduct;
+  const dateObj=pickupDates.find(d=>d.value===state.selectedPODate);
+  const note=document.getElementById('po-note').value;
+  const id='PO-'+String(state.preOrders.length+1).padStart(3,'0');
+  const now=new Date();
+  const timeStr=`${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+  state.preOrders.unshift({
+    id, productId:p.id, productName:p.name, emoji:p.emoji,
+    qty:state.currentPOQty, date:dateObj.day,
+    pickupDate:dateObj.day+' '+dateObj.label,
+    total:p.price*state.currentPOQty,
+    status:'waiting', note, orderedAt:timeStr
+  });
+  document.getElementById('po-modal').style.display='none';
+  document.getElementById('po-note').value='';
+  showToast(`📦 Pre-order ${p.name} x${state.currentPOQty} berhasil dikirim!`);
+  setTimeout(()=>showPage('po'),600);
+}
+
+function renderPOPage(){
+  const area=document.getElementById('po-area');
+  const waiting=state.preOrders.filter(o=>o.status==='waiting').length;
+  const confirmed=state.preOrders.filter(o=>o.status==='confirmed').length;
+  const statusMap={waiting:'⏳ Menunggu',confirmed:'✅ Dikonfirmasi',ready:'🛎 Siap Ambil',cancelled:'❌ Dibatalkan'};
+  const statusClass={waiting:'waiting',confirmed:'confirmed',ready:'ready',cancelled:'cancelled'};
+  area.innerHTML=`
+    <div class="section-title"><span>📦</span> Pre-Order Saya</div>
+    <div class="po-stats">
+      <div class="po-stat"><div class="po-stat-val">${state.preOrders.length}</div><div class="po-stat-label">Total PO</div></div>
+      <div class="po-stat"><div class="po-stat-val" style="color:var(--orange)">${waiting}</div><div class="po-stat-label">Menunggu</div></div>
+      <div class="po-stat"><div class="po-stat-val">${confirmed}</div><div class="po-stat-label">Dikonfirmasi</div></div>
+    </div>
+    <div style="margin-bottom:16px">
+      <button class="btn-primary" onclick="showPage('home')">+ Buat Pre-Order Baru</button>
+    </div>
+    ${!state.preOrders.length?`<div class="empty-state"><div class="empty-icon">📦</div><div class="empty-text">Belum ada pre-order</div></div>`
+    :state.preOrders.map(po=>`
+      <div class="po-card ${statusClass[po.status]}">
+        <div class="po-card-header">
+          <div class="po-card-id">${po.id}</div>
+          <div class="po-status ${statusClass[po.status]}">${statusMap[po.status]}</div>
+        </div>
+        <div class="po-card-product">
+          <div class="po-card-emoji">${po.emoji}</div>
+          <div class="po-card-info">
+            <div class="po-card-name">${po.productName}</div>
+            <div class="po-card-detail">Qty: ${po.qty} · Ambil: ${po.pickupDate}</div>
+            ${po.note?`<div class="po-card-detail" style="margin-top:2px">📝 ${po.note}</div>`:''}
+          </div>
+        </div>
+        <div class="po-card-footer">
+          <div class="po-card-date">🕐 ${po.orderedAt}</div>
+          <div style="display:flex;align-items:center;gap:8px">
+            ${po.status==='waiting'?`<button class="po-cancel-btn" onclick="cancelPO('${po.id}')">Batal</button>`:''}
+            <div class="po-card-total">Rp ${po.total.toLocaleString('id-ID')}</div>
+          </div>
+        </div>
+      </div>`).join('')}`;
+}
+
+function cancelPO(id){
+  const po=state.preOrders.find(p=>p.id===id);
+  if(po){po.status='cancelled';renderPOPage();showToast('Pre-order dibatalkan');}
+}
+
 // ─── ADMIN ───
 let adminTab='dashboard';
 const adminMembers=[
@@ -941,6 +1159,7 @@ function showPage(page){
   if(nav)nav.classList.add('active');
   if(page==='cart')renderCart();
   if(page==='admin')renderAdmin();
+  if(page==='po')renderPOPage();
 }
 
 function switchAdminTab(tab){
@@ -970,7 +1189,8 @@ function renderAdmin(){
   <div class="admin-tabs">
     <button class="admin-tab active" id="atab-dashboard" onclick="switchAdminTab('dashboard')">📊 Dashboard</button>
     <button class="admin-tab" id="atab-products" onclick="switchAdminTab('products')">🏪 Produk</button>
-    <button class="admin-tab" id="atab-orders" onclick="switchAdminTab('orders')">📦 Pesanan</button>
+    <button class="admin-tab" id="atab-orders" onclick="switchAdminTab('orders')">📋 Pesanan</button>
+    <button class="admin-tab" id="atab-po" onclick="switchAdminTab('po')">📦 Pre-Order</button>
     <button class="admin-tab" id="atab-members" onclick="switchAdminTab('members')">👥 Member</button>
   </div>
 
@@ -1100,6 +1320,31 @@ function renderAdmin(){
     </div>
   </div>
 
+  <!-- PO ADMIN -->
+  <div class="admin-content" id="acontent-po">
+    <div class="po-stats" style="margin-bottom:16px">
+      <div class="po-stat"><div class="po-stat-val">${state.preOrders.length}</div><div class="po-stat-label">Total PO</div></div>
+      <div class="po-stat"><div class="po-stat-val" style="color:var(--orange)">${state.preOrders.filter(o=>o.status==='waiting').length}</div><div class="po-stat-label">Menunggu</div></div>
+      <div class="po-stat"><div class="po-stat-val">${state.preOrders.filter(o=>o.status==='confirmed').length}</div><div class="po-stat-label">Dikonfirmasi</div></div>
+    </div>
+    ${state.preOrders.filter(o=>o.status!=='cancelled').map(po=>`
+      <div class="po-admin-card">
+        <div class="po-admin-emoji">${po.emoji}</div>
+        <div class="po-admin-info">
+          <div class="po-admin-name">${po.id} — ${po.productName} x${po.qty}</div>
+          <div class="po-admin-detail">Ambil: ${po.pickupDate} · Rp ${po.total.toLocaleString('id-ID')}</div>
+          ${po.note?`<div class="po-admin-detail" style="margin-top:2px">📝 "${po.note}"</div>`:''}
+          <div style="margin-top:4px"><span class="po-status ${po.status==='waiting'?'waiting':'confirmed'}">${po.status==='waiting'?'⏳ Menunggu':'✅ Dikonfirmasi'}</span></div>
+        </div>
+        <div class="po-admin-actions">
+          ${po.status==='waiting'?`
+            <button class="po-confirm-btn" onclick="adminConfirmPO('${po.id}')">Konfirmasi</button>
+            <button class="po-reject-btn" onclick="adminRejectPO('${po.id}')">Tolak</button>
+          `:`<span style="font-size:11px;color:var(--teal);font-weight:700">✓ Terkonfirmasi</span>`}
+        </div>
+      </div>`).join('')||'<div class="empty-state"><div class="empty-icon">📭</div><div class="empty-text">Tidak ada pre-order aktif</div></div>'}
+  </div>
+
   <!-- MEMBERS -->
   <div class="admin-content" id="acontent-members">
     <div class="stat-grid" style="margin-bottom:16px">
@@ -1126,7 +1371,14 @@ function renderAdmin(){
   </div>`;
 }
 
-function adminAddProduct(){
+function adminConfirmPO(id){
+  const po=state.preOrders.find(p=>p.id===id);
+  if(po){po.status='confirmed';showToast(`✅ PO ${id} dikonfirmasi!`);renderAdmin();}
+}
+function adminRejectPO(id){
+  const po=state.preOrders.find(p=>p.id===id);
+  if(po){po.status='cancelled';showToast(`❌ PO ${id} ditolak`);renderAdmin();}
+}
   const name=document.getElementById('ap-name').value;
   const price=parseInt(document.getElementById('ap-price').value);
   const stock=parseInt(document.getElementById('ap-stock').value);
